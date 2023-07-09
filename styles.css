@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/**
+Main CSS
+*/
+
+:root {
+    --img-background-color: #e1f1fd;
+    --main-background-color: #4663ac;
+    --header-text-color: #d2deeb;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.side-image {
+    background-image: url(images/background-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--img-background-color);
+    width: 45vw;
+}
+
+form {
+    background-color: var(--main-background-color);
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55vw;
+}
+
+.entire-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+    padding: 0 3vw;
+}
+
+
+h1 {
+    font-size: 4rem;
+    margin: 1rem 1rem 3rem;
+    padding: 0 3vw;
+    font-weight: 600;
+    color: var(--header-text-color);
+}
+
+.input-form {
+    font-size: 1rem;
+    margin: 1rem;
+    
+}
+
+::placeholder {
+    color: #023047;
+    
+}
+
+input {
+    height: 2rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    border: 3px solid var(--main-background-color);
+    border-radius: 1rem;
+    text-indent: 1rem;
+    transition: all 0.3s ease 0s;
+
+}
+
+.button {
+    margin: 2rem 1rem 3rem;
+    padding: 0 3vw;
+}
+
+
+.sign-up-button {
+    display: inline-block;
+    width: 18rem;
+    height: 3rem;
+    text-align: center;
+    margin: auto;
+    border: 1px solid var(--main-background-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    background-color:  #8ecae6;
+    color:  #023047;
+    font-size: 1.5rem;
+}
+
+.sign-up-button:hover {
+    transform: translateY(-7px);
+}
+
+.side-image p {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    margin-top: 10rem;
+    color: #007ea7;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+    font-family: 'Amaranth', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form p {
+    font-size: 2.5rem;
+    margin: 2rem 1rem 2rem;
+    padding: 0 3vw;
+    color: var(--header-text-color)
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid lightblue;
+}
